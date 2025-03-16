@@ -5,7 +5,7 @@ from pygame.font import Font
 from pygame.rect import Rect
 from pygame.surface import Surface
 
-from code.Const import WIN_WIDTH, C_ORANGE, MENU_OPTION, C_WHITE, C_YELLOW, C_CYAN
+from code.Const import WIN_WIDTH, MENU_OPTION, C_WHITE, C_YELLOW, C_CYAN
 
 
 class Menu:
@@ -17,6 +17,7 @@ class Menu:
     def run(self, ):
         menu_option = 0
         pygame.mixer_music.load('./asset/Menu.mp3')
+        pygame.mixer_music.set_volume(0.9)
         pygame.mixer_music.play(-1)
         while True:
             # Draw Images

@@ -31,6 +31,10 @@ ENTITY_SPEED = {
     'Level2Bg8': 3,
     'Level2Bg9': 3,
     'Level2Bg10': 3,
+    'Level3Bg0': 0,
+    'Level3Bg1': 0,
+    'Level3Bg2': 3,
+    'Level3Bg3': 4,
     'Player1': 3,
     'Player1Shot': 3,
     'Player2': 3,
@@ -72,6 +76,10 @@ ENTITY_HEALTH = {
     'Level2Bg8': 999,
     'Level2Bg9': 999,
     'Level2Bg10': 999,
+    'Level3Bg0': 999,
+    'Level3Bg1': 999,
+    'Level3Bg2': 999,
+    'Level3Bg3': 999,
     'Player1': 300,
     'Player1Shot': 1,
     'Player2': 300,
@@ -105,6 +113,10 @@ ENTITY_DAMAGE = {
     'Level2Bg8': 0,
     'Level2Bg9': 0,
     'Level2Bg10': 0,
+    'Level3Bg0': 0,
+    'Level3Bg1': 0,
+    'Level3Bg2': 0,
+    'Level3Bg3': 0,
     'Player1': 1,
     'Player1Shot': 20,
     'Player2': 1,
@@ -140,6 +152,10 @@ ENTITY_SCORE = {
     'Level2Bg8': 0,
     'Level2Bg9': 0,
     'Level2Bg10': 0,
+    'Level3Bg0': 0,
+    'Level3Bg1': 0,
+    'Level3Bg2': 0,
+    'Level3Bg3': 0,
     'Player1': 0,
     'Player1Shot': 0,
     'Player2': 0,
@@ -172,11 +188,11 @@ PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL,
                     'Player2': pygame.K_LCTRL}
 
 # S
-SPAWN_TIME = 3000
+SPAWN_TIME = 2500
 
 # T
 TIMEOUT_STEP = 100
-TIMEOUT_LEVEL = 6000
+TIMEOUT_LEVEL = 60000
 
 # W
 WIN_WIDTH = 576
