@@ -80,7 +80,7 @@ ENTITY_HEALTH = {
     'Level3Bg1': 999,
     'Level3Bg2': 999,
     'Level3Bg3': 999,
-    'Player1': 300,
+    'Player1': 1,
     'Player1Shot': 1,
     'Player2': 300,
     'Player2Shot': 1,
@@ -197,6 +197,10 @@ TIMEOUT_LEVEL = 60000
 # W
 WIN_WIDTH = 576
 WIN_HEIGHT = 324
+
+# G
+GAME_OVER_POS = {'Title0': (WIN_WIDTH / 2, 100),
+                 'Title1': (WIN_WIDTH / 2, 150)}
 
 # S (It's here because of parameter WIN_WIDTH)
 SCORE_POS = {'Title': (WIN_WIDTH / 2, 50),

@@ -15,6 +15,7 @@ from code.Enemy import Enemy
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
 from code.EntityMediator import EntityMediator
+from code.GameOver import GameOver
 from code.Player import Player
 
 
@@ -78,6 +79,8 @@ class Level:
                         found_player = True
 
                 if not found_player:
+                    game_over_screen = GameOver(self.window)  # Pegamos a pontuação do Player1
+                    game_over_screen.show_game_over()
                     return False
 
             # printed text
