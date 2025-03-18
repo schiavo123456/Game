@@ -22,8 +22,8 @@ class GameOver:
         pygame.mixer_music.set_volume(0.5)
         pygame.mixer_music.play(-1)
         self.window.blit(source=self.surf, dest=self.rect)
-        self.game_over_text(48, 'GAME', C_YELLOW, GAME_OVER_POS['Title0'])
-        self.game_over_text(48, 'OVER', C_YELLOW, GAME_OVER_POS['Title1'])
+        self.game_over_text(60, 'GAME', C_YELLOW, GAME_OVER_POS['Title0'])
+        self.game_over_text(60, 'OVER', C_YELLOW, GAME_OVER_POS['Title1'])
 
         while True:
             for event in pygame.event.get():

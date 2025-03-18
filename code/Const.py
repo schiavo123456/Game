@@ -4,8 +4,9 @@ import pygame.constants
 C_ORANGE = (255, 128, 0)
 C_WHITE = (255, 255, 255)
 C_YELLOW = (255, 242, 0)
-C_GREEN = (0, 128, 0)
+C_GREEN = (0, 120, 0)
 C_CYAN = (0, 128, 128)
+C_BLACK = (5, 5, 5)
 
 # E
 EVENT_ENEMY = pygame.USEREVENT + 1
@@ -13,28 +14,25 @@ EVENT_TIMEOUT = pygame.USEREVENT + 2
 ENTITY_SPEED = {
     'Level1Bg0': 0,
     'Level1Bg1': 1,
-    'Level1Bg2': 1.5,
-    'Level1Bg3': 2,
-    'Level1Bg4': 2.5,
-    'Level1Bg5': 2.8,
-    'Level1Bg6': 3,
-    'Level1Bg7': 3,
-    'Level1Bg8': 3,
+    'Level1Bg2': 2,
+    'Level1Bg3': 3,
+    'Level1Bg4': 4,
+    'Level1Bg5': 4,
+    'Level1Bg6': 5,
+    'Level1Bg7': 5,
+    'Level1Bg8': 5,
     'Level2Bg0': 0,
     'Level2Bg1': 0,
     'Level2Bg2': 1,
-    'Level2Bg3': 1.5,
-    'Level2Bg4': 2,
-    'Level2Bg5': 2.5,
-    'Level2Bg6': 2.5,
-    'Level2Bg7': 3,
-    'Level2Bg8': 3,
-    'Level2Bg9': 3,
-    'Level2Bg10': 3,
+    'Level2Bg3': 2,
+    'Level2Bg4': 3,
+    'Level2Bg5': 4,
+    'Level2Bg6': 5,
+    'Level2Bg7': 6,
     'Level3Bg0': 0,
     'Level3Bg1': 0,
-    'Level3Bg2': 3,
-    'Level3Bg3': 4,
+    'Level3Bg2': 4,
+    'Level3Bg3': 5,
     'Player1': 3,
     'Player1Shot': 3,
     'Player2': 3,
@@ -73,20 +71,17 @@ ENTITY_HEALTH = {
     'Level2Bg5': 999,
     'Level2Bg6': 999,
     'Level2Bg7': 999,
-    'Level2Bg8': 999,
-    'Level2Bg9': 999,
-    'Level2Bg10': 999,
     'Level3Bg0': 999,
     'Level3Bg1': 999,
     'Level3Bg2': 999,
     'Level3Bg3': 999,
-    'Player1': 1,
+    'Player1': 300,
     'Player1Shot': 1,
     'Player2': 300,
     'Player2Shot': 1,
-    'Enemy1': 150,
+    'Enemy1': 200,
     'Enemy1Shot': 1,
-    'Enemy2': 200,
+    'Enemy2': 300,
     'Enemy2Shot': 1,
     'Enemy3': 150,
     'Enemy3Shot': 1,
@@ -110,9 +105,6 @@ ENTITY_DAMAGE = {
     'Level2Bg5': 0,
     'Level2Bg6': 0,
     'Level2Bg7': 0,
-    'Level2Bg8': 0,
-    'Level2Bg9': 0,
-    'Level2Bg10': 0,
     'Level3Bg0': 0,
     'Level3Bg1': 0,
     'Level3Bg2': 0,
@@ -149,9 +141,6 @@ ENTITY_SCORE = {
     'Level2Bg5': 0,
     'Level2Bg6': 0,
     'Level2Bg7': 0,
-    'Level2Bg8': 0,
-    'Level2Bg9': 0,
-    'Level2Bg10': 0,
     'Level3Bg0': 0,
     'Level3Bg1': 0,
     'Level3Bg2': 0,
@@ -160,7 +149,7 @@ ENTITY_SCORE = {
     'Player1Shot': 0,
     'Player2': 0,
     'Player2Shot': 0,
-    'Enemy1': 100,
+    'Enemy1': 120,
     'Enemy1Shot': 0,
     'Enemy2': 150,
     'Enemy2Shot': 0,
@@ -188,33 +177,34 @@ PLAYER_KEY_SHOOT = {'Player1': pygame.K_RCTRL,
                     'Player2': pygame.K_LCTRL}
 
 # S
-SPAWN_TIME = 2500
+SPAWN_TIME = 4000
 
 # T
 TIMEOUT_STEP = 100
 TIMEOUT_LEVEL = 60000
 
 # W
-WIN_WIDTH = 576
-WIN_HEIGHT = 324
+WIN_WIDTH = 800
+WIN_HEIGHT = 450
 
 # G
-GAME_OVER_POS = {'Title0': (WIN_WIDTH / 2, 100),
-                 'Title1': (WIN_WIDTH / 2, 150)}
+GAME_OVER_POS = {'Title0': ((WIN_WIDTH / 2) - 30, (WIN_HEIGHT / 2) - 50),
+                 'Title1': ((WIN_WIDTH / 2) + 30, (WIN_HEIGHT / 2) + 50),
+                 }
 
 # S (It's here because of parameter WIN_WIDTH)
 SCORE_POS = {'Title': (WIN_WIDTH / 2, 50),
-             'EnterName': (WIN_WIDTH / 2, 80),
-             'Label': (WIN_WIDTH / 2, 90),
-             'Name': (WIN_WIDTH / 2, 110),
-             0: (WIN_WIDTH / 2, 110),
-             1: (WIN_WIDTH / 2, 130),
-             2: (WIN_WIDTH / 2, 150),
-             3: (WIN_WIDTH / 2, 170),
-             4: (WIN_WIDTH / 2, 190),
-             5: (WIN_WIDTH / 2, 210),
-             6: (WIN_WIDTH / 2, 230),
-             7: (WIN_WIDTH / 2, 250),
-             8: (WIN_WIDTH / 2, 270),
-             9: (WIN_WIDTH / 2, 290),
+             'EnterName': (WIN_WIDTH / 2, 100),
+             'Label': (WIN_WIDTH / 2, 110),
+             'Name': (WIN_WIDTH / 2, 120),
+             0: (WIN_WIDTH / 2, 140),
+             1: (WIN_WIDTH / 2, 170),
+             2: (WIN_WIDTH / 2, 200),
+             3: (WIN_WIDTH / 2, 230),
+             4: (WIN_WIDTH / 2, 260),
+             5: (WIN_WIDTH / 2, 290),
+             6: (WIN_WIDTH / 2, 320),
+             7: (WIN_WIDTH / 2, 350),
+             8: (WIN_WIDTH / 2, 380),
+             9: (WIN_WIDTH / 2, 410),
              }

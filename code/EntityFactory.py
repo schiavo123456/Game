@@ -21,7 +21,7 @@ class EntityFactory:
                 return list_bg
             case 'Level2Bg':
                 list_bg = []
-                for i in range(11):  # Level 2 Background Images Number
+                for i in range(8):  # Level 2 Background Images Number
                     list_bg.append(Background(f'Level2Bg{i}', (0, 0)))
                     list_bg.append(Background(f'Level2Bg{i}', (WIN_WIDTH, 0)))
                 return list_bg

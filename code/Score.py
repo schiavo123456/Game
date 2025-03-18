@@ -56,7 +56,7 @@ class Score:
                     else:
                         if len(name) < 4:
                             name += event.unicode
-            self.score_text(20, name, C_WHITE, SCORE_POS['Name'])
+            self.score_text(22, name, C_WHITE, SCORE_POS['Name'])
             pygame.display.flip()
             pass
 
@@ -66,14 +66,14 @@ class Score:
         pygame.mixer_music.play(-1)
         self.window.blit(source=self.surf, dest=self.rect)
         self.score_text(48, 'TOP 10 SCORE', C_YELLOW, SCORE_POS['Title'])
-        self.score_text(20, 'NAME     SCORE           DATE      ', C_CYAN, SCORE_POS['Label'])
+        self.score_text(22, 'NAME     SCORE           DATE      ', C_CYAN, SCORE_POS['Label'])
         db_proxy = DBProxy('DBScore')
         list_score = db_proxy.retrieve_top10()
         db_proxy.close()
 
         for player_score in list_score:
             id_, name, score, date = player_score
-            self.score_text(20, f'{name}     {score:05d}     {date}', C_WHITE,
+            self.score_text(22, f'{name}     {score:05d}     {date}', C_WHITE,
                             SCORE_POS[list_score.index(player_score)])
         while True:
             for event in pygame.event.get():
